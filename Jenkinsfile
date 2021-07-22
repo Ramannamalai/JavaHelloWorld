@@ -5,7 +5,7 @@ stages {
 stage("Build") {
 steps {
 bat "mvn -version"
-bat "clean install"
+bat "mvn clean install"
 }
 }
 }
