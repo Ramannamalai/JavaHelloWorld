@@ -1,19 +1,16 @@
 pipeline {
 agent any
 
-tools{
-apache-maven-3.8.1
-}
 
 stages {
-stage("Build") {
-steps {
-git 'https://github.com/Vignesh2793/JavaHelloWorld'
+	stage("Build") {
 
-bat "mvn clean install"
-}
-}
-}
+		withMaven(maven : 'maven_3_8_1') {
+
+		bat "mvn clean install"
+		}
+		}
+	}
 
 
 }
