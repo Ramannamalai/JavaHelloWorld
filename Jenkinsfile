@@ -4,8 +4,8 @@ agent any
 stages {
 stage("Build") {
 steps {
-sh "mvn -version"
-sh ""
+bat "mvn -version"
+bat "clean install"
 }
 }
 }
