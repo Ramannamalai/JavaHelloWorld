@@ -1,17 +1,13 @@
 pipeline {
 agent any
 
-tools{
-maven "maven-3.8.1"
-}
-
 stages {
-	stage("Build") {
 		steps{
 
-			sh "mvn clean package"
-		
-		     }
+		withMaven(maven : 'maven_3_8_1') {
+
+		bat "mvn clean install"
+		}
 		}
 	}
 
