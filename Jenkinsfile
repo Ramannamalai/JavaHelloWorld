@@ -7,7 +7,7 @@ stages {
 		steps{
 			withMaven(maven : 'maven_3_8_1') {
 
-			mvn clean install
+			bat 'mvn clean install'
 		
 			}
 			}		
