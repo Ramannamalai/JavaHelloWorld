@@ -2,7 +2,7 @@ pipeline {
 agent any
 
 tools{
-maven "M3"
+apache-maven-3.8.1
 }
 
 stages {
