@@ -4,7 +4,8 @@ agent any
 stages {
 stage("Build") {
 steps {
-bat "mvn -version"
+git 'https://github.com/Vignesh2793/JavaHelloWorld'
+
 bat "mvn clean install"
 }
 }
