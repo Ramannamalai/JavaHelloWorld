@@ -12,9 +12,10 @@ stages {
 			bat 'mvn clean install'
 		
 			}
-			}		
+			}
 		}
-        stage("update yaml"){
+    stage("update yaml"){
+				steps{
 				def filename = '${WORKSPACE}/env/dev/deployment.yaml'
 				def data = readYaml file: filename
 
@@ -22,6 +23,7 @@ stages {
 
 				sh "rm $filename"
 				writeYaml file: filename, data: data
+			}
 			}
 	}
 
