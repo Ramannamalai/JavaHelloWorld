@@ -15,7 +15,7 @@ stages {
 				script{
 				def data = readYaml file:"C:\\Users\\sugheerth\\Documents\\deployment.yaml"
 				
-				data.version = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
+				data.steps.build-example.type = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
 
 				writeYaml file: "C:\\Users\\sugheerth\\Documents\\deployment1.yaml", data: data
 				}
