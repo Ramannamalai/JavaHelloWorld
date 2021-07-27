@@ -16,8 +16,8 @@ stages {
 				def data = readYaml file:"${WORKSPACE}/env/dev/deployment.yaml"
 				
 				data = ['data.spec.template.spec.containers.image' : 'acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version']
-				bat "del '${WORKSPACE}\\env\\dev\\deployment.yaml'"
-				writeYaml file: "${WORKSPACE}/env/dev/deployment.yaml", data: data
+
+				writeYaml file: "${WORKSPACE}/env/dev/deployment1.yaml", data: data
 				}
 			}
 			
