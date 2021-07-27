@@ -19,14 +19,13 @@ stages {
 		}
     stage("update yaml"){
 				steps{
-				
+				script{
 				${data}.spec.template.spec.containers.image = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:${version}"
 				sh "rm ${filename}"
 				writeYaml file: "${filename}", data: data
+				}
 			}
 			
 	}
-
-
 }
 }
