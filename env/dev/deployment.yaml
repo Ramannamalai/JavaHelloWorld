@@ -1,10 +1,4 @@
 ---
-apiVersion: apps/v1
-spec: 
-  selector: 
-    matchLabels: 
-      app: advisor-service
-  template: 
     spec: 
       containers: 
       - name: advisor-service
