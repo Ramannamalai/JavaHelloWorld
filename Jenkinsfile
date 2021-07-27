@@ -15,7 +15,7 @@ stages {
 				script{
 				def data = readYaml file:"${WORKSPACE}/env/dev/deployment.yaml"
 				
-				data.spec.containers.image = acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version
+				data.spec.containers.image = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
 
 				writeYaml file: "${WORKSPACE}/env/dev/deployment1.yaml", data: data
 				}
