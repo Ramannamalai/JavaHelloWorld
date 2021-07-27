@@ -1,0 +1,16 @@
+---
+apiVersion:apps/v1
+spec:
+  selector:
+    matchLabels:
+      app: advisor-service
+  template:
+    spec:
+      containers:
+      - name: advisor-service
+        image: acrlvdevopsuks001.azurecr.io/sr/adisor-portal:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
+---
