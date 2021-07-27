@@ -13,7 +13,7 @@ stages {
     stage("update yaml"){
 				steps{
 				script{
-				def data = readYaml file:"$C:\Users\sugheerth\Documents\deployment.yaml"
+				def data = readYaml file:"C:\Users\sugheerth\Documents\deployment.yaml"
 				
 				data.version = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
 
