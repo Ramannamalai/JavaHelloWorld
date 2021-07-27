@@ -5,7 +5,7 @@ agent any
 environment{
 
 version = "1.0.0.${BUILD_NUMBER}"
-filename = '${WORKSPACE}/env/dev/deployment.yaml'
+filename = '/env/dev/deployment.yaml'
 data = readYaml file: filename
 
 }
