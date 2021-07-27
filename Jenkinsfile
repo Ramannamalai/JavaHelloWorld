@@ -1,11 +1,14 @@
-def version = "1.0.0.${BUILD_NUMBER}"
-def filename = '${WORKSPACE}/env/dev/deployment.yaml'
-def data = readYaml file: filename
-
 
 pipeline {
 agent any
 
+environment{
+
+version = "1.0.0.${BUILD_NUMBER}"
+filename = '${WORKSPACE}/env/dev/deployment.yaml'
+data = readYaml file: filename
+
+}
 
 stages {
 	stage("Build"){
