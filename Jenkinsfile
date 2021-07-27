@@ -17,7 +17,7 @@ stages {
 				
 				data.spec.containers.image = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
 				
-				writeYaml file: "${WORKSPACE}/env/dev/deployment.yaml", data: data, overwrite
+				writeYaml file: "${WORKSPACE}/env/dev/deployment.yaml", data: data, overwrite: true
 				}
 			}
 			
