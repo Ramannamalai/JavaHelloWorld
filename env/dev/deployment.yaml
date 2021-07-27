@@ -1,10 +1,7 @@
----
-    spec: 
-      containers: 
-      - name: advisor-service
-        image: acrlvdevopsuks001.azurecr.io/sr/adisor-portal:latest
-        ports: 
-        - containerPort: 8080
-      imagePullSecrets: 
-      - name: regcred
----
+spec: 
+  containers: 
+    - name: advisor-service
+    image: acrlvdevopsuks001.azurecr.io/sr/adisor-portal:latest
+    ports: 
+      - containerPort: 8080
+      

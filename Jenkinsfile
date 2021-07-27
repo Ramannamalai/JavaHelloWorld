@@ -13,11 +13,11 @@ stages {
     stage("update yaml"){
 				steps{
 				script{
-				def data = readYaml file:"C:\\Users\\sugheerth\\Documents\\deployment.yaml"
+				def data = readYaml file:"${WORKSPACE}/env/dev/deployment.yaml"
 				
-				data.steps.'build-example'.type = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
+				data.spec.containers.image = "acrlvdevopsuks001.azurecr.io/sr/adisor-portal:$version"
 
-				writeYaml file: "C:\\Users\\sugheerth\\Documents\\deployment1.yaml", data: data
+				writeYaml file: "${WORKSPACE}/env/dev/deployment.yaml", data: data
 				}
 			}
 			
